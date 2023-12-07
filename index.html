@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mathscript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="startTime()">
+
+    <div id="preloader"></div>
+
+
+
+    <div class="cal-container">
+
+        <div class="clock">
+            <span id="time">time goes here</span>
+        </div>
+        <div class="display">
+            <input style="font-size: 30px;" id="screen" type="text" role="20"  readonly placeholder="0">
+        </div>
+        <div class="btn-container">
+
+            <p class="span">
+               
+                <input type="button" value="sin" class="btn btn-sign" onclick="sine()">
+                <input type="button" value="cos" class="btn btn-sign" onclick="cosine()">
+                <input type="button" value="tan" class="btn btn-sign" onclick="tan()">
+                <button onclick="invsine()" class="btn btn-sign">sin<sup><span>-1</span></sup></button>
+                <button onclick="invcosine()" class="btn btn-sign">cos<sup><span>-1</span></sup></button>
+            </p>
+
+            <p class="span">
+                <button onclick="invtan()" class="btn btn-sign">tan<sup><span>-1</span></sup></button>
+                <input type="button" value="π" class="btn btn-sign" onclick="pi()">
+                <input type="button" value="in" class="btn btn-sign" onclick="In()">
+                <input type="button" value="log" class="btn btn-sign" onclick="log()">
+                <input type="button" value="%" class="btn btn-sign" onclick="percent()">
+            </p>
+
+            <p class="span">
+                <button onclick="square()" class="btn btn-sign">x<sup><span>2</span></sup></button>
+                <button onclick="cube()" class="btn btn-sign">x<sup><span>3</span></sup></button>
+                <input type="button" value="√" class="btn btn-sign" onclick="sqrt()">
+                <input type="button" value="(" class="btn btn-sign" onclick=" press('(')">
+                <input type="button" value=")" class="btn btn-sign" onclick="press(')')">
+            </p>
+
+            <p style="margin-top: 20px;">
+                <input type="button" value="7" class="btn btn-num" onclick=" press(7)">
+                <input type="button" value="8" class="btn btn-num" onclick="press(8)">
+                <input type="button" value="9" class="btn btn-num" onclick="press(9)">
+                <input type="button" value="Del" class="btn btn-red" onclick="backSpace()">
+                <input type="button" value="C" class="btn btn-red" onclick="clearScreen('')">
+            </p>
+
+            <p>
+                <input type="button" value="4" class="btn btn-num" onclick=" press(4)">
+                <input type="button" value="5" class="btn btn-num" onclick=" press(5)">
+                <input type="button" value="6" class="btn btn-num" onclick=" press(6)">
+                <input type="button" value="x" class="btn btn-operator" onclick=" press('*')">
+                <input type="button" value="/" class="btn btn-operator" onclick=" press('/')">
+            </p>
+
+            <p>
+                <input type="button" value="1" class="btn btn-num" onclick=" press(1)">
+                <input type="button" value="2" class="btn btn-num" onclick=" press(2)">
+                <input type="button" value="3" class="btn btn-num" onclick=" press(3)">
+                <input type="button" value="+" class="btn btn-operator" onclick=" press('+')">
+                <input type="button" value="-" class="btn btn-operator" onclick=" press('-')">
+            </p>
+
+            <p>
+                <input type="button" value="0" class="btn btn-num" onclick=" press(0)">
+                <input type="button" value="±" class="btn btn-operator" onclick="plusminus()">
+                <input type="button" value="." class="btn btn-operator" onclick=" press('.')">
+                <input type="button" value="Exp" class="btn btn-operator" onclick="Exp()">
+                <input style="background: green;" type="button" value="=" class="btn btn-operator" onclick="calculate()">
+            </p>
+            
+            
+            <div style="display: none;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dTf2ysBk1RI?si=TA8YKAf6WEonbFDF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        
+
+
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

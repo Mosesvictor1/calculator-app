@@ -1,0 +1,425 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
+
+#preloader{
+    background: #000 url(loading.gif) no-repeat center;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+
+.cal-container{
+    background-color: rgb(41, 41, 44);
+    align-items: center;
+    text-align: center;
+    width: 380px;
+    height: 550px;
+    padding-top: 20px;
+    border-radius: px;
+    resize: both;
+
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #fff;
+    
+
+}
+.clock{
+    background: #000;
+    width: 146px;
+    border: 1.5px solid #000;
+    margin-left: 12.5rem;
+    margin-top: 10px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    display: flex;
+    
+}
+.clock span{
+    background: #f00;
+    text-align: center;
+    padding-top: 7PX;
+    font-size: 18PX;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 5px;
+    border: 2px solid white;
+    border-radius: 3px;
+    box-shadow: inset 4px 4px 6px -1px rgba(223, 10, 10, 0.2),
+                inset -4px -4px 6px -1px rgba(212, 15, 15, 0.7),
+               inset -0.5px 0.5px 0px rgb(183, 16, 16),
+                0.5px 0.5px 0px rgba(255, 0, 0, 0.05),
+                0px 12px 10px -10px rgba(220, 5, 5, 0.05);
+
+    
+}
+.display{
+    position: relative;
+    top: 8px;
+    background: #000;
+    display: inline-block;
+    width: 320px;
+    height: 50px;
+    border-radius: 5px;
+}
+#screen{
+    text-align: right;
+    padding-right: 2px;
+    height: 100%;
+    border-radius: 5px;
+    width: 100%;
+    background: rgb(193, 185, 185)(0, 255, 255);
+    font-size: 20px;
+    overflow: hidden;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px 0.5px 0px rgba(255,255,255,1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.05),
+    0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+.btn-container{
+    margin-top: 45px;
+    width: 100%;
+
+}
+.btn-container .btn{
+    width: 45px;
+    height: 100%;
+    border-top: 2px solid transparent;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    padding-block: 7px;
+    margin: 8px 10px 10px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    
+}
+.span span{
+    font-size: 12px;
+    position: relative;
+    bottom: 5px;
+}
+.btn-container input, .btn-container button{
+    padding-right: 10px;
+}
+.btn-sign{
+    background: lightsteelblue;
+    border: none;
+    padding-block: 4px;
+    padding-left: 4px;
+    padding-right: 10px;
+    text-align: center;
+    align-items: center;
+    border-radius: 7px;
+    border-top: 2px solid lightsteelblue;
+    border-bottom: 2px solid #000;
+
+}
+
+.btn-sign:hover{
+    background: rgb(4, 255, 0);
+}
+.btn-sign:active{
+    border-bottom: 2px solid lightsteelblue;
+    border-top: 2px solid #000;
+}
+.btn-num:hover{
+    background: rgb(40, 236, 6);
+}
+.btn-operator:hover{
+    background: blue;
+}
+
+.btn-num{
+    background: rgb(0, 0, 0);
+    color: #fff;
+    border: transparent;
+    padding-block: 4px;
+    padding-left: 4px;
+    padding-right: 10px;
+    text-align: center;
+    align-items: center;
+    border-radius: 7px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #3b3737;
+}
+
+.btn-num:active{
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #3b3737;
+}
+.btn-red{
+    background: #f00;
+    color: #000;
+    border: transparent;
+    font-weight: 700;
+    padding-block: 4px;
+    padding-left: 4px;
+    padding-right: 10px;
+    text-align: center;
+    align-items: center;
+    border-radius: 7px;
+    border-top: 2px solid #f00;
+    border-bottom: 2px solid #000;
+}
+.btn-red:active{
+    border-bottom: 2px solid #f00;
+    border-top: 2px solid #000;
+}
+.btn-operator{
+    background: #1f1f1f;
+    color: #Fff;
+    border: transparent;
+    font-weight: 700;
+    padding-block: 4px;
+    padding-left: 4px;
+    padding-right: 10px;
+    text-align: center;
+    align-items: center;
+    border-radius: 7px;
+    border-top: 2px solid #111;
+    border-bottom: 2px solid #000;
+}
+.btn-operator:active{
+    border-bottom: 2px solid #111;
+    border-top: 2px solid #000;
+}
+
+
+@media only screen and (max-width: 425px){
+    .cal-container{
+        margin-top: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    .display{
+        position: relative;
+        top: 8px;
+        background: #000;
+        display: inline-block;
+        width: 340px;
+        height: 60px;
+        border-radius: 5px;
+    }
+    .btn-container .btn{
+        width: 45px;
+        height: 38px;
+        padding: 5px 10px;
+        text-align: center;
+        margin: 14px;
+       
+        
+    }
+    .clock{
+        width: 180px;
+        height: 45px;
+        align-items: center;
+        text-align: center;
+    }
+    .clock span{
+        background: #f00;
+        text-align: center;
+        display: flex;
+        font-size: 20px;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-container .btn{
+        font-size: 18px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+   
+}
+
+@media(max-width: 414px){
+    .clock{
+        width: 194px;
+        height: 50px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .btn-container .btn{
+        width: 50px;
+        height: 50px;
+        padding: 8px 15px;
+        text-align: center;
+        margin: 12px;
+       
+        
+    }
+    .btn-container{
+        margin-top: 50px;
+    }
+    .display{
+        position: relative;
+        top: 8px;
+        background: #000;
+        display: inline-block;
+        width: 378px;
+        height: 70px;
+        border-radius: 5px;
+    }
+     }
+@media(max-width: 375px){
+    .clock{
+        max-width: 160px;
+        height: 45px;
+        align-items: center;
+        text-align: center;
+        margin-right: 30px;
+    }
+    
+    .btn-container .btn{
+        width: 49px;
+        height: 38px;
+        padding: 5px 10px;
+        text-align: center;
+        margin: 12px;
+       
+        
+    }
+    .display{
+        position: relative;
+        top: 8px;
+        background: #000;
+        display: inline-block;
+        width: 333px;
+        height: 60px;
+        border-radius: 5px;
+    }
+     }
+     @media(max-width: 320px){
+        .cal-container{
+            margin-top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .display{
+            position: relative;
+            top: 8px;
+            background: #000;
+            display: inline-block;
+            max-width: 100%;
+            height: 60px;
+            border-radius: 5px;
+        }
+        .btn-container .btn{
+            width: 44px;
+            height: 100%;
+            text-align: center;
+            margin: 6px;
+            margin-block: 15px;
+           
+            
+        }
+        .clock{
+            max-width: 135px;
+            height: 45px;
+            margin-left: 184px;
+            align-items: center;
+        }
+        .clock span{
+            background: #f00;
+            text-align: center;
+            display: flex;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 600;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn-container .btn{
+            font-size: 18px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+     }
+
+     @media(max-width: 390px){
+        .clock{
+            width: 170px;
+            height: 45px;
+            
+            align-items: center;
+            text-align: center;
+        }
+        .btn-container .btn{
+            height: 40px;
+            padding: 5px 10px;
+            text-align: center;
+            margin: 12px 10px;
+           
+            
+        }
+        .display{
+            position: relative;
+            top: 8px;
+            background: #000;
+            display: inline-block;
+            width: 350px;
+            height: 60px;
+            margin-top: 8px;
+            border-radius: 5px;
+        }
+         }
+
+         @media(max-width: 360px){
+            .clock{
+                width: 150px;
+                height: 45px;
+                
+                align-items: center;
+                text-align: center;
+            }
+            .btn-container .btn{
+                
+                padding: 5px 10px;
+                text-align: center;
+                margin: 12px 8px;
+               
+                
+            }
+            .display{
+                position: relative;
+                top: 8px;
+                background: #000;
+                display: inline-block;
+                width: 345px;
+                height: 60px;
+                margin-top: 8px;
+                border-radius: 5px;
+            }
+             }
+
+         
+
+     
